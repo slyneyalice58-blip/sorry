@@ -1,0 +1,58 @@
+body{
+    background-image: url(Images/audi.jpg) ;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+    background-position: top;
+   background-size: 100% 350px;
+   
+}
+
+h1{
+    color: black;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: rgb(199, 191, 191);
+    font-size: 100px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+
+}
+
+a{
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: blue;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: aqua;
+}
+
+p{
+    font-size: larger;
+    color: rgb(230, 48, 48);
+    font-display: ;
+}
+
+marquee{
+    text-transform: uppercase;
+    animation-play-state: running;
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.desc{
+    color: black;
+}

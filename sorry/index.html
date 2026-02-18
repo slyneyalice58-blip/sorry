@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, My Queen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #fbc2c2 0%, #f8e0e0 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 2px solid #ffb6b6;
+        }
+        h1 {
+            color: #b34b4b;
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-family: 'Brush Script MT', cursive;
+        }
+        p {
+            color: #5a3e3e;
+            font-size: 1.4em;
+            line-height: 1.6;
+        }
+        .heart {
+            color: #ff6b6b;
+            font-size: 4em;
+            animation: beat 1.2s infinite;
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        button {
+            background-color: #ff9f9f;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            border: 1px solid #ff7e7e;
+        }
+        button:hover {
+            background-color: #ff7e7e;
+        }
+        .hidden-note {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffe4e4;
+            border-radius: 15px;
+            color: #4d2e2e;
+            font-style: italic;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #a06b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>I'm Sorry, My Queen</h1>
+        <p>
+            I know I messed up, and I deeply regret it.<br>
+            You mean the world to me, and I never want to see you upset and sad or hurt.<br>
+            Am really sorry baby .I really love you and i really feel bad for what i have done. <br>
+            Please forgive me, my love. I love BABYYY i really do.
+        </p>
+        <button onclick="showNote()">Click for a little something</button>
+        <div id="extraNote" class="hidden-note">
+            You are the most amazing person in my life.<br>
+            I promise to do better, listen more, and love you endlessly.<br>
+            Forever yours ❤️
+        </div>
+        <div class="footer">
+            Made with love, just for you.
+        </div>
+    </div>
+
+    <script>
+        function showNote() {
+            const note = document.getElementById('extraNote');
+            note.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

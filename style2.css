@@ -1,0 +1,133 @@
+@import url(https:////googleapis.com/css?family=poppins:400;500;600;700;800;900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0b1c2c;
+}
+
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+/* animated ring */
+.container span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+   background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: blink 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s / 50));
+}
+
+@keyframes blink{
+    0%{
+        background: #0ef;
+    }
+    25%{
+        background: #2c4766;
+    }
+}
+
+/* login box */
+.login-box{
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.login-box h2{
+    color: #0ef;
+    margin-bottom: 20px;
+}
+
+form{
+    width: 100%;
+}
+
+/* inputs */
+.input-box{
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    color: #fff;
+    transition: 5s ease;
+}
+
+.input-box label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label{
+    top: -8px;
+    font-size: 12px;
+}
+
+.forget-pass{
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.forget-pass a{
+    color: #fff;
+    text-decoration: none;
+    font-size: .85em;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    background: #0ef;
+    border: none;
+    border-radius: 20px;
+    color: #0b1c2c;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* sign up */
+.signup-link{
+    margin: 12px;
+}
+
+.signup-link a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 85em;
+}

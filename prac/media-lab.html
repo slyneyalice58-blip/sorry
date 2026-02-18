@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sly Media Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="media-lab.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <h1>Sly Media Lab</h1>
+      <p>Edit photos and videos in one place.</p>
+    </header>
+
+    <section class="mode-switch" aria-label="Editor Mode">
+      <button class="tab active" data-mode="image">Image Studio</button>
+      <button class="tab" data-mode="video">Video Studio</button>
+    </section>
+
+    <section class="workspace">
+      <article class="panel preview-panel">
+        <div id="image-stage" class="stage active">
+          <canvas id="image-canvas" width="1280" height="720"></canvas>
+          <p class="hint" id="image-hint">Upload an image to begin editing.</p>
+        </div>
+
+        <div id="video-stage" class="stage">
+          <video id="video-preview" controls playsinline></video>
+          <p class="hint" id="video-hint">Upload a video to begin editing.</p>
+        </div>
+      </article>
+
+      <aside class="panel controls-panel">
+        <div class="uploader">
+          <label for="file-input">Upload file</label>
+          <input id="file-input" type="file" accept="image/*,video/*" />
+        </div>
+
+        <div id="image-controls" class="controls active"></div>
+        <div id="image-presets" class="preset-wrap active"></div>
+        <div id="video-controls" class="controls"></div>
+        <div id="video-presets" class="preset-wrap"></div>
+
+        <div class="actions">
+          <button id="reset-btn" class="btn ghost">Reset</button>
+          <button id="download-btn" class="btn">Download Image</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="media-lab.js"></script>
+</body>
+</html>
